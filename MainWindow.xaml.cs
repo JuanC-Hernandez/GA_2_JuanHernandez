@@ -24,5 +24,13 @@ namespace GA_2_JuanHernandez
         {
             InitializeComponent();
         }
+
+        private void btnFullName_Click(object sender, RoutedEventArgs e)
+        {
+            string firstName = txtFirstName.Text;
+            string lastName = txtLastName.Text;
+            string fullName = $"{firstName} {lastName}";
+            MessageBox.Show(fullName);
+        }// btnFullName_Click
     }
 }
