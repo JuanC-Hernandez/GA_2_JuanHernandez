@@ -64,5 +64,25 @@ namespace GA_2_JuanHernandez
             string equation = $"{number1} {sign} {number2} {equalSign} {result}";
             lblEquation.Content = equation;
         }
+
+        private void txtWord_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string usersWord = txtWord.Text; 
+            int stringLength = usersWord.Length; 
+            int lastIndex = stringLength - 1; 
+            string formatedString = $"Enter a number between 0 and {lastIndex}"; 
+            lblNumberOfLetters.Content = formatedString;
+
+        }
+
+        private void btnDisplayLetter_Click(object sender, RoutedEventArgs e)
+        {
+            string userWord = txtWord.Text;
+            int usersNumber = int.Parse(txtNumber.Text);
+            char selectedChar = userWord[usersNumber];
+
+            txtDisplayLetter.Text = selectedChar.ToString();
+        }
     }
 }
+//Juan C Hernandez
